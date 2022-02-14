@@ -82,3 +82,41 @@ img {
     margin: 0;
   }
 }
+
+// Buttons
+.button {
+  display: inline-block;
+  background-color: $first-color;
+  color: #fff;
+  padding: 1rem 1.75rem;
+  border-radius: 0.5rem;
+  font-weight: $font-medium;
+  transition: 0.3s;
+
+  &:hover .button__icon {
+    transform: translateX(0.25rem);
+  }
+
+  &:hover {
+    background-color: $first-color-alt;
+  }
+
+  &__icon {
+    transition: 0.3s;
+  }
+
+  &--flex {
+    display: inline-flex;
+    align-items: center;
+    column-gap: 0.5rem;
+  }
+
+  &--link {
+    color: $first-color;
+    font-weight: $font-medium;
+
+    &:hover .button__icon {
+      transform: translateX(0.25rem);
+    }
+  }
+}

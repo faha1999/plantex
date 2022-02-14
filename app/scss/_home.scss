@@ -1,0 +1,65 @@
+.home {
+  padding: 3.5rem 0 2rem;
+
+  .home_container {
+    position: relative;
+    row-gap: 2rem;
+
+    .home_img {
+      width: 200px;
+      justify-self: center;
+    }
+
+    .home_title {
+      font-size: $big-font-size;
+      line-height: 140%;
+      margin-bottom: $mb-1;
+    }
+
+    .home_description {
+      margin-bottom: $mb-2-5;
+    }
+
+    .home_social {
+      position: absolute;
+      top: 2rem;
+      right: -1rem;
+      display: grid;
+      justify-items: center;
+      row-gap: 3.5rem;
+
+      .home_social-follow {
+        font-weight: $font-medium;
+        font-size: $smaller-font-size;
+        color: $first-color;
+        position: relative;
+        transform: rotate(90deg);
+
+        &::after {
+          content: '';
+          position: absolute;
+          width: 1rem;
+          height: 2px;
+          background-color: $first-color;
+          right: -45%;
+          top: 50%;
+        }
+      }
+      .home_social-links {
+        display: inline-flex;
+        flex-direction: column;
+        row-gap: 0.25rem;
+
+        .home_social-link {
+          font-size: 1rem;
+          color: $first-color;
+          transition: 0.3s;
+
+          &:hover {
+            transform: translateX(0.25rem);
+          }
+        }
+      }
+    }
+  }
+}
