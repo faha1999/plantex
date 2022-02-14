@@ -1,0 +1,131 @@
+.header {
+  width: 100%;
+  background-color: $body-color;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: $z-fixed;
+  transition: 0.4s; // For animation dark mode
+}
+
+.nav {
+  height: $header-height;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .brand_logo,
+  .nav_toggle,
+  .nav_close {
+    color: $title-color;
+  }
+
+  .brand_logo {
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: -1px;
+    display: inline-flex;
+    align-items: center;
+    column-gap: 0.5rem;
+    transition: 0.3s;
+
+    &:hover {
+      color: $first-color;
+    }
+
+    .brand_logo-icon {
+      font-size: 1.15rem;
+      color: $first-color;
+    }
+  }
+
+  .nav_menu {
+    .nav_list {
+      display: flex;
+      flex-direction: column;
+      row-gap: 1.5rem;
+
+      .nav_link {
+        color: $title-color;
+        font-weight: $font-medium;
+
+        &:hover {
+          color: $first-color;
+        }
+      }
+    }
+
+    @media screen and (max-width: 767px) {
+      position: fixed;
+      background-color: $container-color;
+      width: 80%;
+      height: 100%;
+      top: 0;
+      right: -100%;
+      box-shadow: -2px 0 4px hsla($hue, 24%, 15%, 0.1);
+      padding: 4rem 0 0 3rem;
+      border-radius: 1rem 0 0 1rem;
+      transition: 0.3s;
+      z-index: $z-fixed;
+    }
+  }
+
+  .nav_close {
+    font-size: 1.5rem;
+    position: absolute;
+    top: 1rem;
+    right: 1.25rem;
+    cursor: pointer;
+  }
+
+  .nav_toggle {
+    display: inline-flex;
+    font-size: 1.25rem;
+    cursor: pointer;
+  }
+
+  .show-menu {
+    right: 0;
+  }
+}
+
+/* Change background header */
+.scroll-header {
+  box-shadow: 0 1px 4px hsla($hue, 4%, 15%, 0.1);
+}
+
+/* Active link */
+.active-link {
+  position: relative;
+  color: $first-color;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -0.5rem;
+    left: 0;
+    width: 50%;
+    height: 2px;
+    background-color: $first-color;
+  }
+}
+
+@media screen and (min-width: 767px) {
+  .nav {
+    height: calc($header-height + 1.5rem);
+    column-gap: 3rem;
+
+    .nav_toggle,
+    .nav_close {
+      display: none;
+    }
+    .nav_menu {
+      margin-left: auto;
+
+      .nav_list {
+        flex-direction: row;
+        column-gap: 3rem;
+      }
+    }
+  }
+}
