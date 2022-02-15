@@ -1,0 +1,67 @@
+.questions {
+  background-color: $first-color-lighten;
+
+  .questions_container {
+    gap: 1.5rem;
+    padding: 1.5rem 0;
+  }
+  .questions_group {
+    display: grid;
+    row-gap: 1.5rem;
+  }
+  .questions_item {
+    background-color: $container-color;
+    border-radius: 0.25rem;
+
+    &:hover {
+      box-shadow: 0 2px 8px hsla($hue, 4%, 15%, 0.15);
+    }
+  }
+  .questions_item-title {
+    font-size: $small-font-size;
+    font-weight: $font-medium;
+  }
+  .questions_icon {
+    font-size: 1.25rem;
+    color: $title-color;
+  }
+  .questions_description {
+    font-size: $smaller-font-size;
+    padding: 0 1.25rem 1.25rem 2.5rem;
+  }
+  .questions_header {
+    display: flex;
+    align-items: center;
+    column-gap: 0.5rem;
+    padding: 0.75rem 0.5rem;
+    cursor: pointer;
+  }
+  .questions_content {
+    overflow: hidden;
+    height: 0;
+  }
+  .questions_item,
+  .questions_header,
+  .questions_item-title,
+  .questions_icon,
+  .questions_description,
+  .questions_content {
+    transition: 0.3s;
+  }
+}
+
+/*Rotate icon and add font weight to titles*/
+.accordion-open {
+  .questions_header,
+  .questions_content {
+    background-color: $first-color;
+  }
+  .questions_item-title,
+  .questions_description,
+  .questions_icon {
+    color: #fff;
+  }
+  .questions_icon {
+    transform: rotate(45deg);
+  }
+}
