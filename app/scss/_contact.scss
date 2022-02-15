@@ -1,0 +1,82 @@
+.contact {
+  .contact_container {
+    row-gap: 3.5rem;
+  }
+  .contact_data {
+    display: grid;
+    row-gap: 2rem;
+  }
+  .contact_subtitle {
+    font-size: $normal-font-size;
+    font-weight: $font-medium;
+    color: $text-color;
+    margin-bottom: $mb-0-5;
+  }
+  .contact_description {
+    display: inline-flex;
+    align-items: center;
+    column-gap: 0.5rem;
+    color: $title-color;
+    font-weight: $font-medium;
+  }
+  .contact_icon {
+    font-size: 1.25rem;
+  }
+  .contact_inputs {
+    display: grid;
+    row-gap: 2rem;
+    margin-bottom: $mb-2-5;
+  }
+  .contact_content {
+    position: relative;
+    height: 3rem;
+    border-bottom: 1px solid $text-color-light;
+  }
+  .contact_input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 1rem 1rem 1rem 0;
+    background: none;
+    color: $text-color;
+    border: none;
+    outline: none;
+    z-index: 1;
+
+    &:focus + .contact_label {
+      top: -0.75rem;
+      left: 0;
+      font-size: $smaller-font-size;
+      z-index: 10;
+    }
+    // &:not(:placeholder-shown).contact_input:not(:focus + .contact_label) {
+    //   top: -0.75rem;
+    //   font-size: $smaller-font-size;
+    //   z-index: 10;
+    // }
+  }
+  .contact_label {
+    position: absolute;
+    top: 0.75rem;
+    width: 100%;
+    font-size: $small-font-size;
+    color: $text-color-light;
+    transition: 0.3s;
+  }
+  .contact_area {
+    height: 7rem;
+
+    & textarea {
+      resize: none;
+    }
+  }
+}
+
+.contact_input:not(:placeholder-shown).contact_input:not(:focus)
+  + .contact_label {
+  top: -0.75rem;
+  font-size: var(--smaller-font-size);
+  z-index: 10;
+}
