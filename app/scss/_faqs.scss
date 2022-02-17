@@ -50,7 +50,7 @@
   }
 }
 
-/*Rotate icon and add font weight to titles*/
+// Rotate icon and add font weight to titles
 .accordion-open {
   .questions_header,
   .questions_content {
@@ -72,7 +72,7 @@
   }
 }
 
-/* For large devices */
+// For large devices
 @media screen and (min-width: 992px) {
   .questions {
     .questions_container {
