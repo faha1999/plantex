@@ -1,11 +1,99 @@
-// //  variables dark theme
-// body.dark-theme {
-//   $first-color-dark: ($hue, 8%, 20%);
-//   $title-color: ($hue, 4%, 95%);
-//   $text-color: ($hue, 4%, 75%);
-//   $body-color: ($hue, 8%, 12%);
-//   $container-color: ($hue, 8%, 16%);
-// }
+//  variables dark theme
+$first-color-dark: hsl($hue, 8%, 20%);
+$title-color-dark: hsl($hue, 4%, 95%);
+$text-color-dark: hsl($hue, 4%, 75%);
+$body-color-dark: hsl($hue, 8%, 12%);
+$container-color-dark: hsl($hue, 8%, 16%);
+
+body.dark-theme {
+  background-color: $body-color-dark;
+  color: $text-color-dark;
+
+  h1,
+  h2,
+  h3 {
+    color: $container-color;
+  }
+
+  .active-link {
+    color: $first-color !important;
+  }
+
+  .header {
+    background-color: $body-color-dark;
+    .nav {
+      .nav_link {
+        color: $body-color;
+      }
+
+      .nav_menu {
+        @media screen and (max-width: 767px) {
+          background-color: $first-color-dark;
+        }
+      }
+
+      .brand_logo:hover {
+        color: $first-color;
+      }
+
+      .brand_logo,
+      .nav_toggle,
+      .nav_close {
+        color: $title-color-dark;
+      }
+    }
+  }
+
+  .about_description,
+  .about_details {
+    color: $text-color-dark;
+  }
+
+  .steps_card {
+    background-color: $container-color-dark !important;
+  }
+
+  .steps_bg,
+  .questions {
+    background-color: $first-color-dark;
+  }
+
+  .product_circle,
+  .footer_subscribe {
+    background-color: $container-color-dark;
+  }
+
+  .product_title,
+  .product_price {
+    color: $title-color-dark;
+  }
+
+  .contact_information {
+    h3,
+    span {
+      color: $title-color-dark !important;
+    }
+  }
+
+  .questions_item {
+    background-color: $container-color-dark;
+
+    i {
+      color: $container-color;
+    }
+  }
+
+  .footer_logo {
+    color: $text-color-dark;
+  }
+  .scroll-header {
+    box-shadow: 0 1px 4px hsla($hue, 4%, 4%, 0.3);
+  }
+
+  .change-theme {
+    color: $title-color-dark;
+  }
+}
 
 // dark btn
 .nav_btns {
@@ -20,17 +108,4 @@
   cursor: pointer;
 }
 
-// // Color dark theme
-// .dark-theme .steps_bg,
-// .dark-theme .questions {
-//   background-color: $first-color-dark;
-// }
-
-// .dark-theme .product_circle,
-// .dark-theme .footer_subscribe {
-//   background-color: $container-color;
-// }
-
-// .dark-theme .scroll-header {
-//   box-shadow: 0 1px 4px hsla($hue, 4%, 4%, 0.3);
-// }
+// Color dark theme
