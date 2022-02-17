@@ -129,3 +129,22 @@
     }
   }
 }
+
+@media screen and (min-width: 767px) {
+  .nav {
+    height: calc($header-height) + 1.5rem;
+    column-gap: 3rem;
+
+    .nav_toggle,
+    .nav_close {
+      display: none;
+    }
+    .nav_menu {
+      margin-left: auto;
+    }
+    .nav_list {
+      flex-direction: row;
+      column-gap: 3rem;
+    }
+  }
+}

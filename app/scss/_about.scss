@@ -29,3 +29,16 @@
     }
   }
 }
+
+/* For large devices */
+@media screen and (min-width: 992px) {
+  .about_img {
+    width: 380px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .about_container {
+    column-gap: 7rem;
+  }
+}

@@ -120,3 +120,41 @@ img {
     }
   }
 }
+
+@media screen and (max-width: 320px) {
+  .container {
+    margin-left: $mb-1;
+    margin-right: $mb-1;
+  }
+}
+
+@media screen and (min-width: 767px) {
+  body {
+    margin: 0;
+  }
+
+  .home_container,
+  .about_container,
+  .questions_container,
+  .contact_container,
+  .footer_container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* For large devices */
+@media screen and (min-width: 992px) {
+  .container {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .section {
+    padding: 8rem 0 1rem;
+
+    &__title,
+    &__title-center {
+      font-size: $h1-font-size;
+    }
+  }
+}

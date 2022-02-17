@@ -65,3 +65,30 @@
     transform: rotate(45deg);
   }
 }
+
+@media screen and (min-width: 767px) {
+  .questions_container {
+    align-items: flex-start;
+  }
+}
+
+/* For large devices */
+@media screen and (min-width: 992px) {
+  .questions {
+    .questions_container {
+      padding: 1rem 0 4rem;
+    }
+    .questions_title {
+      text-align: initial;
+    }
+    .questions_group {
+      row-gap: 2rem;
+    }
+    .questions_header {
+      padding: 1rem;
+    }
+    .questions_description {
+      padding: 0 3.5rem 2.25rem 2.75rem;
+    }
+  }
+}

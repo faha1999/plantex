@@ -99,7 +99,7 @@
     opacity: 1;
   }
 
-  &__icon {
+  .footer_icon {
     font-size: 1rem;
     color: #fff;
   }
@@ -118,5 +118,44 @@
   &-thumb {
     background: hsl($hue, 4%, 29%);
     border-radius: 0.5rem;
+  }
+}
+
+/* For medium devices */
+@media screen and (min-width: 576px) {
+  .footer_subscribe {
+    width: 400px;
+  }
+}
+
+@media screen and (min-width: 767px) {
+  .footer {
+    .footer_container {
+      column-gap: 3rem;
+    }
+    .footer_subscribe {
+      width: initial;
+    }
+  }
+}
+
+/* For large devices */
+@media screen and (min-width: 992px) {
+  .footer {
+    .footer_logo {
+      font-size: $h3-font-size;
+    }
+    .footer_container {
+      grid-template-columns: 1fr 0.5fr 0.5fr 0.5fr;
+    }
+    .footer_copy {
+      margin: 7rem 0 2rem;
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .scrollup {
+    right: 3rem;
   }
 }

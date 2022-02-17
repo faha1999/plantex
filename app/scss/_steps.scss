@@ -43,3 +43,38 @@
     }
   }
 }
+
+@media screen and (max-width: 320px) {
+  .steps {
+    .steps_bg {
+      padding: 2rem 1rem;
+    }
+    .steps_card {
+      padding: 1.5rem;
+    }
+  }
+}
+
+/* For medium devices */
+@media screen and (min-width: 576px) {
+  .steps {
+    .steps_container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+
+/* For large devices */
+@media screen and (min-width: 992px) {
+  .steps {
+    .steps_container {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    .steps_bg {
+      padding: 3.5rem 2.5rem;
+    }
+    .steps_card-title {
+      font-size: $normal-font-size;
+    }
+  }
+}
